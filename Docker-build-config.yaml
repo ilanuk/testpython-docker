@@ -29,7 +29,6 @@ spec:
       from:
         kind: DockerImage
         name: 'ubuntu:16.04'
-        namespace: openshift
     type: Docker
   triggers:
     - 
