@@ -1,0 +1,46 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftWebConsole
+  creationTimestamp: '2019-03-16T20:28:46Z'
+  labels:
+    app: testwebapp-docker
+  name: testwebapp-docker
+  namespace: myfirstweb-docker
+  resourceVersion: '125869'
+  selfLink: /apis/build.openshift.io/v1/namespaces/myfirstweb/buildconfigs/testwebapp-docker
+  uid: 19462ee7-482a-11e9-bff0-0800279e1d27
+spec:
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'testwebapp:latest'
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      ref: master
+      uri: 'https://github.com/ilanuk/testpython.git'
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: 'python:3.6'
+        namespace: openshift
+    type: Source
+  triggers:
+    - 
+      type: ImageChange
+    - type: ConfigChange
+    - generic:
+        secret: d543cfa5471b95c8
+      type: Generic
+    - github:
+        secret: 3fec46245f4c9d99
+      type: GitHub
+status:
+  lastVersion: 1
