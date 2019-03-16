@@ -12,10 +12,6 @@ metadata:
   selfLink: /apis/build.openshift.io/v1/namespaces/myfirstweb/buildconfigs/testwebapp-docker
 spec:
   nodeSelector: null
-  output:
-    to:
-      kind: ImageStreamTag
-      name: 'testwebapp-docker:latest'
   postCommit: {}
   resources: {}
   runPolicy: Serial
