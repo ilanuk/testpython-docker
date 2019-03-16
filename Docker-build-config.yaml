@@ -9,8 +9,7 @@ metadata:
   name: testwebapp-docker
   namespace: testwebapp-docker
   resourceVersion: '125869'
-  selfLink: /apis/build.openshift.io/v1/namespaces/testwebapp-docker/buildconfigs/testwebapp-docker
-  uid: 19462ee7-482a-11e9-bff0-0800279e1d27
+  selfLink: /apis/build.openshift.io/v1/namespaces/myfirstweb/buildconfigs/testwebapp-docker
 spec:
   nodeSelector: null
   output:
@@ -23,15 +22,15 @@ spec:
   source:
     git:
       ref: master
-      uri: 'https://github.com/ilanuk/testpython.git'
+      uri: 'https://github.com/ilanuk/testpython-docker.git'
     type: Git
   strategy:
-    sourceStrategy:
+    dockerStrategy:
       from:
-        kind: ImageStreamTag
-        name: 'python:3.6'
+        kind: DockerImage
+        name: 'ubuntu:16.04'
         namespace: openshift
-    type: Source
+    type: Docker
   triggers:
     - 
       type: ImageChange
