@@ -7,9 +7,9 @@ metadata:
   labels:
     app: testwebapp-docker
   name: testwebapp-docker
-  namespace: myfirstweb-docker
+  namespace: testwebapp-docker
   resourceVersion: '125869'
-  selfLink: /apis/build.openshift.io/v1/namespaces/myfirstweb/buildconfigs/testwebapp-docker
+  selfLink: /apis/build.openshift.io/v1/namespaces/testwebapp-docker/buildconfigs/testwebapp-docker
   uid: 19462ee7-482a-11e9-bff0-0800279e1d27
 spec:
   nodeSelector: null
