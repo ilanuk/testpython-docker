@@ -7,15 +7,15 @@ metadata:
   labels:
     app: testwebapp-docker
   name: testwebapp-docker
-  namespace: testwebappdocker
+  namespace: testwebapp-docker
   resourceVersion: '125869'
-  selfLink: /apis/build.openshift.io/v1/namespaces/testwebappdocker/buildconfigs/testwebappdocker
+  selfLink: /apis/build.openshift.io/v1/namespaces/testwebapp-docker/buildconfigs/testwebapp-docker
 spec:
   nodeSelector: null
   output:
     to:
       kind: ImageStreamTag
-      name: 'testwebapp-docker:latest'
+      name: 'testwebappdocker:latest'
   postCommit: {}
   resources: {}
   runPolicy: Serial
