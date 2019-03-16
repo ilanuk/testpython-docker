@@ -7,9 +7,9 @@ metadata:
   labels:
     app: testwebapp-docker
   name: testwebapp-docker
-  namespace: testwebapp-docker
+  namespace: testwebappdocker
   resourceVersion: '125869'
-  selfLink: /apis/build.openshift.io/v1/namespaces/testwebapp-docker/buildconfigs/testwebapp-docker
+  selfLink: /apis/build.openshift.io/v1/namespaces/testwebappdocker/buildconfigs/testwebappdocker
 spec:
   nodeSelector: null
   output:
